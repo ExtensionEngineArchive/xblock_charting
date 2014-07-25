@@ -62,6 +62,7 @@ You can change the parameters of the pie chart by pressing the edit button.
 ![Display pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/5.png)
 
 Right now you can change:
+
     1. Title of the XBlock
     2. Width and Height of the XBlock
     3. Start and End angle of the Pie Chart
@@ -75,6 +76,7 @@ Right now you can change:
 ![Editing pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/6.png)
 
 ## Student interaction with the XBlock: ##
+
     1. Legend:    click one -> show/hide group of data
                   double click -> hide every group of data except the one that was clicked
     2. Pie Chart: hover over -> shows the label with group name and value over the group
