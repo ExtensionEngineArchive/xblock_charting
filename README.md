@@ -37,7 +37,7 @@ In order to install the XBlock into your edX devstack Server you need to:
         #. Change the value for the key ``"advanced_modules"`` to ``piechart``
 
 
-# Using the XBlock in the course
+## Using the XBlock in the course ##
 In the Studio go to:
 
 ![Settings->Advanced Settings](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/1.png)
@@ -71,7 +71,7 @@ Right now you can change:
 
 ![Editing pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/6.png)
 
-# Student interaction with the XBlock:
+## Student interaction with the XBlock: ##
     1. Legend:    click one -> show/hide group of data
                   double click -> hide every group of data except the one that was clicked
     2. Pie Chart: hover over -> shows the label with group name and value over the group
