@@ -13,6 +13,7 @@ In order to install the XBlock into your edX devstack Server you need to:
         vagrant@precise64:~$ sudo -u edxapp /edx/bin/pip.edxapp install /path/to/your/block
         
   3. Enable the block:
+
         #.  In ``edx-platform/lms/envs/common.py``, uncomment::
 
             # from xmodule.x_module import prefer_xmodules
@@ -32,6 +33,8 @@ In order to install the XBlock into your edX devstack Server you need to:
             'ALLOW_ALL_ADVANCED_COMPONENTS': True
             
   4. Add the block to your courses' advanced settings in Studio:
+  
+
         #. Log in to Studio, and open your course
         #. Settings -> Advanced Settings
         #. Change the value for the key ``"advanced_modules"`` to ``piechart``
