@@ -1,9 +1,9 @@
-# nvd3 Pie Chart edX XBlock #
-This XBlock allows students to visualize data on a pie chart and even interact with it.
-You can easily integrate the XBlock into edX and start to use the pie chart.
+# Pie Chart edX XBlock - NVD3 #
+This XBlock allows students to visualize data on a pie chart and interact with it.
+You can easily integrate the XBlock into Open edX and start to use the pie chart.
 
 ## Installation instructions ##
-In order to install the XBlock into your edX devstack Server you need to:
+In order to install the XBlock into your Open edX devstack Server you need to:
 
   1. Download the XBlock from github. Place the files inside your server.
   2. Install your block:
