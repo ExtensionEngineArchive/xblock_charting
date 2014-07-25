@@ -1,0 +1,17 @@
+/* CSS for PieChartXBlock Studio View */
+
+input#edit_show_labels, input#edit_donut {
+    min-width:20px; 
+    width:20px; 
+    height:20px; 
+    vertical-align:middle;
+}
+
+label#name, label#value {
+    text-align:center;
+    width: 20%;
+}
+
+input.group-name, input.group-value {
+    width: 20% !important;
+}

@@ -1,0 +1,102 @@
+<div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
+    <ul class="list-input settings-list">
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Title</label>
+                <input class="input setting-input edit-display-name" id="edit_display_name" value="{{display_name}}" type="text">
+                <span class="tip setting-help">Example: Pie Chart</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Width [px]</label>
+                <input class="input setting-input edit-width" id="edit_width" value="{{width}}" type="text">
+                <span class="tip setting-help">Example: 500</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Height [px]</label>
+                <input class="input setting-input edit-height" id="edit_height" value="{{height}}" type="text">
+                <span class="tip setting-help">Example: 500</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Start Angle [°]</label>
+                <input class="input setting-input edit-start-angle" id="edit_start_angle" value="{{startAngle}}" type="number" min="0" max="360">
+                <span class="tip setting-help">Example: 0</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">End Angle [°]</label>
+                <input class="input setting-input edit-end-angle" id="edit_end_angle" value="{{endAngle}}" type="number" min="0" max="360">
+                <span class="tip setting-help">Example: 360</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+                <div class="wrapper-comp-setting">
+                    <label class="label setting-label">Show Labels</label>
+                    <input class="input setting-input edit-show-labels" id="edit_show_labels" type="checkbox" {% if showLabels %} checked {% endif %}>  Yes
+                </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Label Threshold [%]</label>
+                <input class="input setting-input edit-label_threshold" id="edit_label_threshold" value="{{labelThreshold}}" type="number" min="0" max="100">
+                <span class="tip setting-help">Threshold example: 5<br/>Minimum: 0<br/>Maximum: 100</span>
+            </div>
+            <span class="tip setting-help">Only groups with percent above the set threshold will have visible labels</span>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Label Type</label>
+                <select class="input setting-input edit-label_type" id="edit_label_type" value="{{labelType}}">
+                    {% for lt in labelTypes %}
+                        <option value="{{forloop.counter0}}" {% if forloop.counter0 == labelType %}selected="selected"{% endif %}>
+                            {{lt}}
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Donut Pie Chart</label>
+                <input class="input setting-input edit-donut" id="edit_donut" type="checkbox" {% if donut %} checked {% endif %}>  Yes
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div class="wrapper-comp-setting">
+                <label class="label setting-label">Number of Available Groups</label>
+                <input class="input setting-input edit-number_of_groups" id="edit_groups" value="{{lengrp}}" type="number" min="2" max="10">
+                <span class="tip setting-help">Example: 5</span>
+            </div>
+        </li>
+        <li class="field comp-setting-entry is-set">
+            <div id="panel2" class="wrapper-comp-setting">
+                <label class="label setting-label">Group</label><label class="label setting-label" id="name">Name</label><label class="label setting-label" id="value">Value</label>
+                <span class="tip setting-help">Name example: Male<br/>Value example: 54.1</span>
+                {% for group in groups %}
+                    <p>
+                        <label class="label setting-label">Group {{forloop.counter}}</label>
+                        <input class="input setting-input group-name" name="group{{forloop.counter}}_name" id="group{{forloop.counter}}_name" value="{{group.0}}" type="text">
+                        <input class="input setting-input group-value" name="group{{forloop.counter}}_value" id="group{{forloop.counter}}_value" value="{{group.1}}" type="text">
+                    </p>
+                {% endfor %}
+            </div> 
+        </li>
+    </ul>
+    <div class="xblock-actions">
+        <span class="xblock-editor-error-message"></span>
+        <ul>
+            <li class="action-item">
+                <a href="#" class="save-button action-primary action">Save</a>
+            </li>
+            <li class="action-item">
+                <a href="#" class="button cancel-button">Cancel</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+/* CSS for PieChartXBlock */
+
+body {
+  overflow-y:scroll;
+}
+
+text {
+  font: 12px sans-serif;
+}
+
+.mypiechart {
+  width: 500px;
+  border: 2px;
+}
