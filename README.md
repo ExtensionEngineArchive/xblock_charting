@@ -37,28 +37,28 @@ In order to install the XBlock into your edX devstack Server you need to:
         #. Change the value for the key ``"advanced_modules"`` to ``piechart``
 
 
-#. Using the XBlock in the course
-.In the Studio go to:
+# Using the XBlock in the course
+In the Studio go to:
 
 ![Settings->Advanced Settings](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/1.png)
 
-.Add a piechart policy key on the advanced_modules keys
+Add a piechart policy key on the advanced_modules keys
 
 ![Policy key added](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/2.png)
 
-.After that, a new button called Advanced will appear in your unit edit view
+After that, a new button called Advanced will appear in your unit edit view
 
 ![Advanced](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/3.png)
 
-.Add a new option called Pie Chart, which will add the component with the default pie chart to the course.
+Add a new option called Pie Chart, which will add the component with the default pie chart to the course.
 
 ![Adding pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/4.png)
 
-.You can change the parameters of the pie chart by pressing the edit button.
+You can change the parameters of the pie chart by pressing the edit button.
 
 ![Display pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/5.png)
 
-.Right now you can change:
+Right now you can change:
     1. Title of the XBlock
     2. Width and Height of the XBlock
     3. Start and End angle of the Pie Chart
@@ -71,7 +71,7 @@ In order to install the XBlock into your edX devstack Server you need to:
 
 ![Editing pie chart](https://raw.githubusercontent.com/ExtensionEngine/xblock_charting/master/doc/img/6.png)
 
-#. Student interaction with the XBlock:
+# Student interaction with the XBlock:
     1. Legend:    click one -> show/hide group of data
                   double click -> hide every group of data except the one that was clicked
     2. Pie Chart: hover over -> shows the label with group name and value over the group
