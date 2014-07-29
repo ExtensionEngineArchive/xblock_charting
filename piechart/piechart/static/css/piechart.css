@@ -1,7 +1,8 @@
 /* CSS for PieChartXBlock */
 
-body {
-  overflow-y:scroll;
+.charts_block {
+  overflow-x:auto;
+  width: 100%;
 }
 
 text {

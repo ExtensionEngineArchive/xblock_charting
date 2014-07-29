@@ -2,7 +2,6 @@
 function PieChartXBlockEdit(runtime, element) {
     
     /* Html element used to alert users, in case of an error */
-    $('.xblock-editor-error-message', element).html();
     $('.xblock-editor-error-message', element).css('display', 'none');
     $('.xblock-editor-error-message', element).css('color', 'red');
 
@@ -119,7 +118,6 @@ function PieChartXBlockEdit(runtime, element) {
             $('.xblock-editor-error-message', element).css('display', 'block');
         }
         else {
-            $('.xblock-editor-error-message', element).html();
             $('.xblock-editor-error-message', element).css('display', 'none');    
         }
     }
