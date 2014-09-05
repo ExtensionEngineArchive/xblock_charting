@@ -82,29 +82,8 @@ class PieChartXBlock(XBlock):
         html_charts = self.resource_string("static/html/piechart.html")
         template = Template(html_charts)
         
-        #getting expected labelType input string for nvd3 chart function
-        if self.labelType == 0:
-            labelType = "percent"
-        elif self.labelType == 2:
-            labelType = "value"
-        else:
-            #in case of 1 or other unexpected value of labelType, group name will be shown
-            labelType = "key"
-            
-        #creating json string from groupNames and groupValues lists
-        groups = [{"groupName":str(name), "groupValue":value} for name, value in zip(self.groupNames, self.groupValues)]
-        
         #parameters sent to browser for XBlock html page
         html = template.render(Context({
-            'groups': str(groups),
-            'showLabels': self.showLabels,
-            'labelType': labelType,
-            'labelThreshold': float(self.labelThreshold)/100,
-            'donut': self.donut,
-            'width': self.width,
-            'height': self.height,
-            'startAngle': self.startAngle,
-            'endAngle': self.endAngle
         }))
         
         frag = Fragment(html)
@@ -176,6 +155,37 @@ class PieChartXBlock(XBlock):
 
         return {
             'result': 'success',
+        }
+        
+    @XBlock.json_handler
+    def send_Data(self, data, suffix=''):
+        """
+        Handler which sends Pie Chart data back to the javascript
+        """
+        
+        #getting expected labelType input string for nvd3 chart function
+        if self.labelType == 0:
+            labelType = "percent"
+        elif self.labelType == 2:
+            labelType = "value"
+        else:
+            #in case of 1 or other unexpected value of labelType, group name will be shown
+            labelType = "key"
+            
+        #creating json string from groupNames and groupValues lists
+        groups = [{"groupName":str(name), "groupValue":value} for name, value in zip(self.groupNames, self.groupValues)]
+
+        return {
+            'result': 'success',
+            'donut': str(self.donut).lower(),
+            'showLabels': str(self.showLabels).lower(),
+            'labelType': labelType,
+            'labelThreshold': float(self.labelThreshold)/100,
+            'width': self.width,
+            'height': self.height,
+            'startAngle': self.startAngle,
+            'endAngle': self.endAngle,
+            'groups': str(groups).replace("\'", "\""),
         }
 
     @staticmethod
